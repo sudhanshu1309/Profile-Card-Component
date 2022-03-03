@@ -1,0 +1,121 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $font;
+  font-size: 18px;
+  line-height: 1.3;
+  background-color: $darkCyan;
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-position: -100vh -147vw, 20vh 45vh;
+  background-repeat: no-repeat, no-repeat;
+
+  @include breakpoint(large) {
+    background-image: url("../images/bg-pattern-top.svg"),
+      url("../images/bg-pattern-bottom.svg");
+    background-position: -45vh -45vw, 100vh 58vh;
+  }
+}
+
+section {
+  margin: auto;
+  margin-top: 146px;
+  margin-bottom: 146px;
+  border-radius: 16px;
+  max-width: 326px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(large) {
+    margin: auto;
+    margin-top: 173px;
+    margin-bottom: 173px;
+    max-width: 350px;
+  }
+
+  .bg {
+    background-image: url("../images/bg-pattern-card.svg");
+    background-repeat: no-repeat;
+    height: 138px;
+    width: 100%;
+    border-start-end-radius: 16px;
+    border-start-start-radius: 16px;
+
+    @include breakpoint(large) {
+      height: 138px;
+    }
+  }
+
+  .data {
+    background-color: white;
+    width: 100%;
+    border-end-end-radius: 16px;
+    border-end-start-radius: 16px;
+    text-align: center;
+
+    img {
+      margin-top: -45px;
+      margin-bottom: 28px;
+      border-radius: 50%;
+      border: 4px solid white;
+    }
+
+    h4 {
+      color: $veryDarkDesaturatedBlue;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      span {
+        font-weight: 400;
+        font-size: 1rem;
+        color: $darkGrayishBlue;
+      }
+    }
+
+    .london {
+      font-weight: 400;
+      color: $darkGrayishBlue;
+      margin-bottom: 26px;
+      font-size: 14px;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: $darkGray;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-bottom: 26px;
+
+      p {
+        font-weight: 700;
+        color: $veryDarkDesaturatedBlue;
+        font-size: 1rem;
+      }
+
+      span {
+        font-weight: 400;
+        color: $darkGrayishBlue;
+        font-size: 14px;
+      }
+    }
+  }
+}

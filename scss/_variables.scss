@@ -1,0 +1,25 @@
+//Font
+$font: "Kumbh Sans", sans-serif;
+
+//Colors
+
+//Primary
+$darkCyan: rgb(25, 162, 174);
+$veryDarkDesaturatedBlue: rgb(45, 50, 72);
+$darkGrayishBlue: rgb(106, 111, 129);
+
+//Neutral
+$darkGray: rgb(150, 150, 150);
+
+//breakpoints
+$breakpoints: (
+  medium: 640px,
+  large: 999px,
+);
+
+//mixin
+@mixin breakpoint($size) {
+  @media screen and(min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
